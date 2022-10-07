@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/gestionStockBoot?createDatabaseIfNotExist=true
+    username: root
+    password: root
+    drive-class-name: com.mysql.cj.jdbc.Driver
+
+## Specify DBMS
+  jpa:
+    database: MYSQL
+    show-sql: false
+    properties:
+      hibernate:
+        ejb:
+          interceptor: com.soufiane.gestiondestock.interceptor.Interceptor
+
+## Hibernate DDL Auto (create, create-drop, update)
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQL5Dialect
+
+server:
+  port: 8081
+
+
+flickr:
+  apiKey: 9b0d2a1ead68d427257301434bfaf9d9
+  apiSecret: 44e634b37ffc65a8
+  appKey: 72157720854964741-258a4b687816e783
+  appSecret: d9af22e5c4481140
